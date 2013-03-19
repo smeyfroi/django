@@ -13,7 +13,7 @@ from django.core import validators
 from django.db.models.fields import AutoField, FieldDoesNotExist
 from django.db.models.fields.related import (ManyToOneRel,
     OneToOneField, add_lazy_relation)
-from django.db import (router, transaction, DatabaseError,
+from django.db import (connections, router, transaction, DatabaseError,
     DEFAULT_DB_ALIAS)
 from django.db.models.query import Q
 from django.db.models.query_utils import DeferredAttribute, deferred_class_factory
