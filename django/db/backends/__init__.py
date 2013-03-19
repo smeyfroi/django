@@ -828,6 +828,8 @@ class BaseDatabaseOperations(object):
         (for example zero in MySQL). This method will raise a ValueError
         if the value is invalid, otherwise returns validated value.
         """
+        if value is None:
+            return None
         return int(value)
 
     def value_to_db_date(self, value):
