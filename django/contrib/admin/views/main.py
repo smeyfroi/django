@@ -254,11 +254,11 @@ class ChangeList(object):
         # Ensure that the primary key is systematically present in the list of
         # ordering fields so we can guarantee a deterministic order across all
         # database backends.
-        pk_name = self.lookup_opts.pk.name
-        if not (set(ordering) & set(['pk', '-pk', pk_name, '-' + pk_name])):
-            # The two sets do not intersect, meaning the pk isn't present. So
-            # we add it.
-            ordering.append('-pk')
+        # pk_name = self.lookup_opts.pk.name
+        # if not (set(ordering) & set(['pk', '-pk', pk_name, '-' + pk_name])):
+        #     # The two sets do not intersect, meaning the pk isn't present. So
+        #     # we add it.
+        #     ordering.append('-pk')
 
         return ordering
 
